@@ -1,15 +1,30 @@
-# Practie 1
-doigralis'
-
 import requests
 from bs4 import BeautifulSoup
 
-url = 'https://habr.com/ru/news/'
+BASE_URL = 'https://habr.com/ru/news/'
 
-habr_news_request = requests.get(url)
 
-habr_news_content = habr_news_request.text
+def get_html_page(url):
+    news_request = requests.get(url)
+    news_content = news_request.text
+    return news_content
 
-parsed_page = BeautifulSoup(habr_news_content)
 
-print(parsed_page.find_all('h2'))
+def find_articles(html_page):
+    parsed_page = BeautifulSoup(html_page, 'html.parser')
+    headings = parsed_page.find_all('a', class_='post__title_link')
+    quantity = len(headings)
+    title_list = list()
+    for i in range(quantity):
+        title_list.append(headings[i].text)
+    return title_list
+
+
+def main():
+
+    print(find_articles(get_html_page(BASE_URL)))
+
+
+if __name__ == '__main__':
+    main()
+
