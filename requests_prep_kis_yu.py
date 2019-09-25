@@ -24,13 +24,13 @@ def find_articles(html_page):
     return title_list
 
 
-def publish_report(title_list, path):
+#def publish_report(title_list, path):
     dictionary = {
         'url': BASE_URL,
         'date': '2019-09-24',
         'articles': title_list
     } 
-   filename='aricles.json'
+ #  filename='aricles.json'
    #with open(filename, 'w') as fp:
     # print(json.dump(dictionary, fp)) 
    # rh = dict(title_list)
