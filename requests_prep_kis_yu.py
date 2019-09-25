@@ -33,15 +33,15 @@ def publish_report(path, articles):
         "creationDate": str(creation_date),
         "articles": articles_dict
     }
-    try:
-        data = json.load(open(path))
-    except:
-        data = []
+    #try:
+    #    data = json.load(open(path))
+    #except:
+    #    data = []
 
-    data.append(titles)
+    #data.append(titles)
 
     with open(path, 'w', encoding='utf-8') as file:
-        json.dump(data, file, indent=2, ensure_ascii=False)
+        json.dump(titles, file, indent=2, ensure_ascii=False)
 
 
 def main():
