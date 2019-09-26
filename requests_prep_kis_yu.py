@@ -34,7 +34,6 @@ def publish_report(path, articles):
         "articles": articles_dict
     }
 
-
     with open(path, 'w', encoding='utf-8') as file:
         json.dump(titles, file, indent=2, ensure_ascii=False)
 
