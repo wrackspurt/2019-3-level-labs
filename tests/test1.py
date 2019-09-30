@@ -1,12 +1,11 @@
 import unittest
-from requests_prep_kis_yu import get_html_page
+from requests_prep_kis_yu import publish_report
 
-
-class Test1(unittest.TestCase):
-    def test_1(self):
-        url = 'http://122123'
-        with self.assertRaises(TypeError):
-            get_html_page(url)
+"""
+class TestPage(unittest.TestCase):
+    def test_html_page(self):
+        path = ''
+"""
 
 
 if __name__ == '__main__':
