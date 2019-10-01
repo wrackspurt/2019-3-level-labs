@@ -2,19 +2,19 @@ import unittest
 import json
 
 
-def check_out(filename, encoding='utf-8'):
+def check_out(filename):
     check = 0
     with open(filename,  encoding='utf-8') as file:
         data_s = json.load(file)
-    if data_s["url"] == "https://habr.com/ru/news/":
+    if data_s["url"] ==
         check = 1
-    if len(data_s["articles"]) >= 1:
-        check = 1
-    for i in data_s["articles"]:
-        for k in i:
-            if i[k]!= None:
-                check = 1
-                break
+    #if len(data_s["articles"]) >= 1:
+    #    check = 1
+    #for i in data_s["articles"]:
+    #    for k in i:
+    #        if i[k]!= None:
+    #            check = 1
+    #            break
     return check
 
 
