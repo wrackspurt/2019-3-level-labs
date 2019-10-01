@@ -5,7 +5,7 @@ import json
 def check_out(afile):
     check = 0
     with open(afile, "r") as file:
-        data_s = json.load(file)
+        data_s = json.load(file) # переделать: написать обычное чтение из файла без load
     if data_s["url"] == "https://habr.com/ru/news/":
         check = 1
     if len(data_s["articles"]) >= 1:
