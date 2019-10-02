@@ -9,6 +9,7 @@ def check_out(filename):
         data_s = json.load(file)
     if data_s["url"] == base_url:
         check = 1
+
     if len(data_s["articles"]) >= 1:
         check = 1
     for i in data_s["articles"]:
