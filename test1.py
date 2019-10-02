@@ -26,7 +26,7 @@ def check_out(filename):
     check3 = 0
     with open(filename,  encoding='utf-8') as file:
         data_s = json.load(file)
-    if data_s["url"] == 'dvsxfv':
+    if data_s["url"] == base_url:
         check1 = 1
     if len(data_s["articles"]) >= 1:
         check2 = 1
