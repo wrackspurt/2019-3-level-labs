@@ -38,10 +38,3 @@ def publish_report(path, articles):
         json.dump(titles, file, indent=2, ensure_ascii=False)
 
 
-def main():
-
-    publish_report(jpath, find_articles(get_html_page(base_url)))
-
-
-if __name__ == '__main__':
-    main()
