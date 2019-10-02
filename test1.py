@@ -44,7 +44,7 @@ def check_out(filename):
 
 
 class TestPage(unittest.TestCase):
-    def test_html_page(self):
+    def test_page(self):
         result = check_out('articles.json')
         self.assertEqual(result, 1)
 
