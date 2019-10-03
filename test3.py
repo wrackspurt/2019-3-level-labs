@@ -6,6 +6,7 @@ from requests_prep_kis_yu import base_url
 def check_out_url(url):
      r = requests.head(url)
      return r.status_code
+#def check_out_url1(url):
 
 
 class TestUrl(unittest.TestCase):
