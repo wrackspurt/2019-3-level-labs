@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import date
 
+
 base_url = 'https://habr.com/ru/news/'
 creation_date = date(year=2019, month=9, day=25)
 jpath = 'articles.json'
