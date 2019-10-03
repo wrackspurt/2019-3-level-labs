@@ -11,7 +11,7 @@ def habr_articles():
     publish_report(jpath, find_articles(get_html_page(base_url)))
     with open(jpath, 'r', encoding='utf-8') as fl:
         dtitles = json.load(fl)
-        return render_template('index.html', habr_articles=dtitles['articles'])
+        return render_template('index.html', habr_articles=dtitles['articles'], habr_url=dtitles)
 
 
 if __name__ == "__main__":

@@ -17,8 +17,10 @@ body {
 
    h1:hover {
        color: #16A5A3;
+   } 
+   h2 {
+      font-family: Century Gothic;
    }
-
    li {
 	   font-family: Century Gothic;
 	   line-height: 30px;
