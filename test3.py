@@ -1,7 +1,6 @@
 import unittest
 import requests
 from requests_prep_kis_yu import base_url
-urlw = "http://jdkfvdlk.com"
 
 
 def check_out_url(url):
