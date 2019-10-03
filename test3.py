@@ -1,11 +1,12 @@
 import unittest
 import requests
 from requests_prep_kis_yu import base_url
+urlw = "http://jdkfvdlk.com"
 
 
 def check_out_url(url):
-     r = requests.head(url)
-     return r.status_code
+    r = requests.head(url)
+    return r.status_code
 
 
 class TestUrl(unittest.TestCase):
@@ -15,5 +16,5 @@ class TestUrl(unittest.TestCase):
 
 
 if __name__ == '__main__':
-        unittest.main()
+    unittest.main()
 
