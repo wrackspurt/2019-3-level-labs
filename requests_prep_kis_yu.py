@@ -1,11 +1,12 @@
 import json
 import requests
 from bs4 import BeautifulSoup
-from datetime import date
+import datetime
 
 
 base_url = 'https://habr.com/ru/news/'
-creation_date = date(year=2019, month=9, day=25)
+current = datetime.datetime.now()
+creation_date = current.strftime("%d-%m-%y")
 jpath = 'articles.json'
 
 
@@ -31,7 +32,7 @@ def publish_report(path, articles):
         articles_dict.append({"title": articles[i]})
     titles = {
         "url": base_url,
-        "creationDate": str(creation_date),
+        "creationDate": creation_date,
         "articles": articles_dict
     }
 

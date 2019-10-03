@@ -32,7 +32,7 @@ def check_out(filename):
         check2 = 1
     for i in data_s["articles"]:
         for k in i:
-            if i[k]!= None:
+            if i[k] is not None:
                 check3 = 1
                 break
     if check1 == 1 & check2 == 1 & check3 == 1:
