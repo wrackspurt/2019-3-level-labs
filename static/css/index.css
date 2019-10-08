@@ -6,6 +6,23 @@ body {
 	background: linear-gradient(to top, #F3DBCF, #AAC9CE);
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #16A5A3;
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 @font-face {
 	font-family: Century Gothic;
     src: url(fonts/11528.ttf);
