@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 import json
 from requests_prep_kis_yu import base_url, jpath, get_html_page, find_articles, publish_report
 
@@ -14,11 +14,9 @@ def habr_articles():
         return render_template('index.html', habr_articles=dtitles['articles'], habr_url=dtitles)
 
 
-@app.route('/hello')
-def hello():
-    l = "Elizabeth"
-    y = "Julia"
-    return render_template('hello.html', l=l, y=y)
+@app.route('/update_page', methods=['POST'])
+def update_page():
+    return redirect(url_for('habr_articles'))
 
 
 if __name__ == "__main__":
