@@ -7,18 +7,22 @@ def check_out(filename):
     check1 = 0
     check2 = 0
     check3 = 0
+    check4 = 0
     with open(filename,  encoding='utf-8') as file:
         data_s = json.load(file)
     if data_s["url"] == base_url:
         check1 = 1
+    for j in data_s["url"]:
+        if j is not None:
+            check2 = 1
     if len(data_s["articles"]) >= 1:
-        check2 = 1
+        check3 = 1
     for i in data_s["articles"]:
         for k in i:
             if i[k] is not None:
-                check3 = 1
+                check4 = 1
                 break
-    if check1 == 1 & check2 == 1 & check3 == 1:
+    if check1 == 1 & check2 == 1 & check3 == 1 & check4 == 1:
         check = 1
         return check
     else:
