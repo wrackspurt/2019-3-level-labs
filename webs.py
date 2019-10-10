@@ -14,5 +14,12 @@ def habr_articles():
         return render_template('index.html', habr_articles=dtitles['articles'], habr_url=dtitles)
 
 
+@app.route('/hello')
+def hello():
+    l = "Elizabeth"
+    y = "Julia"
+    return render_template('hello.html', l=l, y=y)
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8000, debug=True)
