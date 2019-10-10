@@ -6,7 +6,7 @@ from requests_prep_kis_yu import base_url, jpath, get_html_page, find_articles, 
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def habr_articles():
     publish_report(jpath, find_articles(get_html_page(base_url)))
     with open(jpath, 'r', encoding='utf-8') as fl:
