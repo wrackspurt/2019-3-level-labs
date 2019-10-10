@@ -9,10 +9,14 @@
 </head>
 <body>
 <h1>ИТ Новости на Хабре: главные новости технологий</h1>
+<h2>Источник: <a href="{{ habr_url['url'] }}" target="_blank">{{ habr_url['url'] }}</a></h2>
 <ol>
 {% for i in habr_articles %}
-    <li><a href="{{ habr_url['url'] }}" target="_blank">{{ i['title'] }}</a></li>
+    <li>{{ i['title'] }}</li>
  {% endfor %}
 </ol>
+<form method="post" action="/update_page">
+    <button type="submit">refresh</button>
+</form>
 </body>
 </html>
