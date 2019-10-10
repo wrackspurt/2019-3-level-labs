@@ -52,3 +52,28 @@ a:hover {
    li:hover {
 	   color: #16A5A3;
    }
+
+   button {
+       background-color: transparent;
+       background-repeat: no-repeat;
+       border: 2px solid #16A5A3;
+       border-radius: 30px;
+       cursor: pointer;
+       font-family: Century Gothic;
+       font-weight: bold;
+       font-size: 12pt;
+       color: #16A5A3;
+       height:50px;
+       width:100px;
+       position: absolute;
+       top: 700px;
+       left: 1300px;
+    }
+
+    button:hover {
+       background-color: #AAC9CE;
+    }
+
+    button:focus {
+       outline: 0 !important;
+    }
