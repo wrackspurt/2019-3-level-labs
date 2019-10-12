@@ -3,7 +3,8 @@ html {
 }
 
 body {
-	background: linear-gradient(to top, #F3DBCF, #AAC9CE);
+	background: linear-gradient(to top, #F3DBCF, #AAC9CE) no-repeat center center fixed;
+    background-size: cover;
 }
 
 a:link {
