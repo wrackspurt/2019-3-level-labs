@@ -1,7 +1,5 @@
 import unittest
 import json
-import unittest
-import json
 from requests_prep_kis_yu import base_url
 
 
