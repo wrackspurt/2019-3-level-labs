@@ -6,6 +6,11 @@ from requests_prep_kis_yu import base_url, jpath, get_html_page, find_articles, 
 app = Flask(__name__)
 
 
+@app.errorhandler(404)
+def not_found(e):
+    return render_template('404.html')
+
+
 @app.route('/', methods=['GET'])
 def habr_articles():
     publish_report(jpath, find_articles(get_html_page(base_url)))
