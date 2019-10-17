@@ -54,7 +54,7 @@ a:hover {
 	   color: #16A5A3;
    }
 
-   button {
+   .button {
        background-color: transparent;
        background-repeat: no-repeat;
        border: 2px solid #16A5A3;
@@ -70,7 +70,21 @@ a:hover {
        top: 700px;
        left: 1300px;
     }
-
+   .button1 {background-color: transparent;
+       background-repeat: no-repeat;
+       border: 2px solid #16A5A3;
+       border-radius: 30px;
+       cursor: pointer;
+       font-family: Century Gothic;
+       font-weight: bold;
+       font-size: 12pt;
+       color: #16A5A3;
+       height:50px;
+       width:100px;
+       position: absolute;
+       top: 700px;
+       left: 1150px;
+   }
     button:hover {
        background-color: #AAC9CE;
     }
