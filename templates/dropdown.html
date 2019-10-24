@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="shortcut icon" href="https://www.favicon.by/download.php?favicon=5d932d83da440.ico" type="image/x-icon">
+    <base target="_self">
+</head>
+<body>
+<center>
+    <h1>Новости на {{ date }}</h1>
+    <h2>Пожалуйста, выберите источник:</h2>
+     <form method="post" action="/">
+        <select name="sources" class="selectSource">
+            <option selected disabled>your choice</option>
+            {% for source in sources %}
+            <option value="{{ source }}">{{ source }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="goBtn">go</button>
+    </form>
+    <a><img src ='https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif' class="pic"></a>
+</center>
+</body>
+</html>

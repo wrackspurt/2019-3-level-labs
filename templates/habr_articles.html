@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="shortcut icon" href="https://www.favicon.by/download.php?favicon=5d932d83da440.ico" type="image/x-icon">
+    <base target="_self">
+</head>
+<body>
+<center><h1>Новости на {{ date }}</h1></center>
+<h2>Источник: <a href="{{ habr_url }}" target="_blank">{{ habr_url }}</a></h2>
+<ol>
+{% for i in habr_articles %}
+    <li>{{ i['title'] }}</li>
+ {% endfor %}
+</ol>
+<form method="post" action="/update_habr">
+    <button type="submit" class="refreshBtn">refresh</button>
+</form>
+<form method="post" action="/back">
+    <button type="submit" class="backBtn">back</button>
+</form>
+</body>
+</html>
